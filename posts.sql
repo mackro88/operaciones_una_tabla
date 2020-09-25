@@ -32,3 +32,6 @@ VALUES
 -- Modificar la tabla post, agregando la columna título.
 ALTER TABLE post ADD titulo VARCHAR(50);
 -- Agregar título a las publicaciones ya ingresadas
+UPDATE post SET titulo='¿Sabías qué?' WHERE id=1;
+UPDATE post SET titulo='¿Cuánto miden los lobos?' WHERE id=2;
+UPDATE post SET titulo='Plumas pintorescas' WHERE id=3;
