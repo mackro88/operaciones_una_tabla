@@ -8,7 +8,7 @@ CREATE TABLE post(
     nombre_de_usuario VARCHAR(30),
     fecha_de_creacion DATE,
     contenido TEXT,
-    descripcion VARCHAR(250)
+    descripcion VARCHAR(300)
 );
 -- Insertar 3 post, 2 para el usuario "Pamela" y uno para "Carlos"
 INSERT INTO post(
@@ -35,3 +35,21 @@ ALTER TABLE post ADD titulo VARCHAR(50);
 UPDATE post SET titulo='¿Sabías qué?' WHERE id=1;
 UPDATE post SET titulo='¿Cuánto miden los lobos?' WHERE id=2;
 UPDATE post SET titulo='Plumas pintorescas' WHERE id=3;
+-- Insertar 2 post para el usuario "Pedro"
+INSERT INTO post(
+    nombre_de_usuario,
+    fecha_de_creacion,
+    contenido,
+    descripcion,
+    titulo)
+VALUES 
+    ('Pedro', 
+    '2020/08/22', 
+    'Se encuentran situados sobre los ojos, debajo de la barbilla y a los lados de la cara, se encuentran repletos de haces de nervios y pueden detectar el movimiento má,s ligero. Los gatos que deambulan por la noche así, como los que tienen problemas de visión, los usan para "ver" por donde andan, es a travé,s de ellos como pueden maniobrar en espacios estrechos y controlar distancias en sus paseos nocturnos.', 
+    'El nombre científico que se le da a los bigotes es vibrissae, que significa reconocer el más mínimo movimiento o vibració,n del aire en su alrededor.',
+    '¿Para qué le sirven los bigotes al gato?'),
+    ('Pedro',
+    '2020/09/03',
+    'La leyenda del gato sagrado de Birmania cuenta que en el templo de Lao-Tsun vivía un gato de ojos ámbar y con el pelo totalmente blanco llamado Sihn. Se dice que este gato era el más fiel compañero del sacerdote Mun-ha. Cierta noche, unos ladrones asaltaron el templo y mataron a Mun-ha, justo en el momento en que éste se encontraba rezando a los pies de la estatua de una diosa dorada con ojos de color azul zafiro. En el instante mismo de la muerte, Sihn saltó sobre el cadáver del sacerdote Mun-ha y el alma del religioso se instaló en el cuerpo del gato. Fue entonces cuando el manto blanco de Sihn adquirió un hermoso y muy suave tono dorado, procedente del reflejo de la estatua y sólo las cuatro patitas del gato, que estaban en contacto con el cuerpo de Mun-ha, permanecieron totalmente blancas. Los ojos ámbar pasaron a ser de color azul zafiro, como los de la diosa, y la cara, las orejas, la cola y las patas adquirieron el color de la tierra.',
+    'Hay una leyenda en torno a esta raza de gato que pertenece al siglo IX, concretamente a la Edad Media y que se sitúa a la zona del sureste asiático que hoy corresponde a Myanmar, Tailandia y Camboya.',
+    'La leyenda del gato sagrado de Birmania');
