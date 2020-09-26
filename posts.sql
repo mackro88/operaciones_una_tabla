@@ -55,3 +55,16 @@ VALUES
     'La leyenda del gato sagrado de Birmania');
 -- Eliminar el post de carlos
 DELETE FROM post WHERE id=3;
+-- Ingresar un nuevo post para el usuario "Carlos"
+INSERT INTO post(
+    nombre_de_usuario,
+    fecha_de_creacion,
+    contenido,
+    descripcion,
+    titulo)
+VALUES 
+    ('Carlos', 
+    '2020/09/07', 
+    'Estas aves participaron en la Primera y Segunda Guerra Mundial, los pilotos las llevaban en una jaula, con el propósito de avisar en caso de que el avión sufriera algún accidente. En la actualidad los ejércitos francés, suizo, israelí, iraquí y chico continúan utilizandolas para el mismo fin.', 
+    'Las palomas son empleadas como mensajeras.',
+    '¿Palomas mensajeras?');
