@@ -103,3 +103,37 @@ VALUES
     ('2020/09/16 14:16:00.59', 
     'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.', 
     6);
+    -- Crear un nuevo post para "Margarita"
+    INSERT INTO post(
+    nombre_de_usuario,
+    fecha_de_creacion,
+    contenido,
+    descripcion,
+    titulo)
+VALUES 
+    ('Margarita', 
+    '2020/09/17', 
+    'Para descubrir sus efectos, Snowdon y Megan Savage científicos especialistas en otorrinolaringología, visitaron 47 hogares con gatos domésticos, a los que les pusieron cuatro muestras musicales: dos cortes de música clásica y dos de música para gatos. Los felinos respondieron más positivamente a estas últimas acercándose o frotándose con los altavoces de manera más pronta que cuando sonaron los cortes clásicos, según ha recogido un artículo de  la revista Applied Animal Behavior. Esta música especial podría calmar a los gatos que se de  la revista Applied Animal Behavior. Esta música especial podría calmar a los gatos que se encuentran en refugios o que se quedan solos en casa.', 
+    'La forma en la que los animales reaccionan ante la música depende de lo que entendemos por música, esto lo explican psicólogos estadounidenses que estudian el comportamiento animal.',
+    '¿Cómo reaccionan los animales ante la música?');
+    -- Ingresar 5 comentarios para el post de Margarita.
+INSERT INTO comentarios(
+    fecha_y_hora,
+    contenido,
+    post_comentario)
+VALUES 
+    ('2020/09/17 09:10:00.59', 
+    'Sed id contetur augue. Phasellus comodo dapibus lacus vitae bibendum.', 
+    7),
+    ('2020/09/17 10:23:30.59', 
+    'Morbi eet egestas lorem. Aliquam id tempus mi.', 
+    7),
+    ('2020/09/17 10:40:33.49', 
+    'Aliquam magna metus, imperdiet sit amet massa mattis, pretra pulvnar turpis.', 
+    7),
+    ('2020/09/17 11:10:00.59', 
+    'Cras id metus ec urna rhoncus sollicudin.', 
+    7),
+    ('2020/09/17 12:32:00.59', 
+    'Quisue et mauris dictum, cursus nisl et, faucbus sem.', 
+    7);
