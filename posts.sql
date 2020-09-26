@@ -8,7 +8,9 @@ CREATE TABLE post(
     nombre_de_usuario VARCHAR(30),
     fecha_de_creacion DATE,
     contenido TEXT,
-    descripcion VARCHAR(300)
+    descripcion VARCHAR(300),
+    post_comentario INT,
+    PRIMARY KEY (post_comentario)
 );
 -- Insertar 3 post, 2 para el usuario "Pamela" y uno para "Carlos"
 INSERT INTO post(
@@ -68,3 +70,12 @@ VALUES
     'Estas aves participaron en la Primera y Segunda Guerra Mundial, los pilotos las llevaban en una jaula, con el propósito de avisar en caso de que el avión sufriera algún accidente. En la actualidad los ejércitos francés, suizo, israelí, iraquí y chico continúan utilizandolas para el mismo fin.', 
     'Las palomas son empleadas como mensajeras.',
     '¿Palomas mensajeras?');
+-- Parte 2
+-- Crear una nueva tabla, llamada comentarios, con los atributos id, fecha y hora de creación, contenido, que se relacione con la tabla posts.
+CREATE TABLE comentarios(
+    id SERIAL,
+    fecha_y_hora TIMESTAMP, 
+    contenido TEXT,
+    post_comentario INT,
+    FOREIGN KEY (post_comentario) REFERENCES post (post_comentario)
+);
