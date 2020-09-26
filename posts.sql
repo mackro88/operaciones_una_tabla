@@ -9,7 +9,7 @@ CREATE TABLE post(
     fecha_de_creacion DATE,
     contenido TEXT,
     descripcion VARCHAR(300),
-    post_comentario INT,
+    post_comentario SERIAL,
     PRIMARY KEY (post_comentario)
 );
 -- Insertar 3 post, 2 para el usuario "Pamela" y uno para "Carlos"
@@ -75,7 +75,31 @@ VALUES
 CREATE TABLE comentarios(
     id SERIAL,
     fecha_y_hora TIMESTAMP, 
-    contenido TEXT,
+    contenido VARCHAR(300),
     post_comentario INT,
     FOREIGN KEY (post_comentario) REFERENCES post (post_comentario)
 );
+-- Crear 2 comentarios para el post de "Pamela" y 4 para "Carlos"
+INSERT INTO comentarios(
+    fecha_y_hora,
+    contenido,
+    post_comentario)
+VALUES 
+    ('2020/09/09 21:00:00.59', 
+    'Sed id consectetur augue. Phasellus commodo dapibus lacus vitae bibendum.', 
+    1),
+    ('2020/09/11 13:00:00.59', 
+    'Morbi eget egestas lorem. Aliquam id tempus mi.', 
+    2),
+    ('2020/09/14 14:00:00.59', 
+    'Aliquam magna metus, imperdiet sit amet massa mattis, pharetra pulvinar turpis.', 
+    6),
+    ('2020/09/14 14:10:00.59', 
+    'Cras id metus nec urna rhoncus sollicitudin.', 
+    6),
+    ('2020/09/15 14:12:00.59', 
+    'Quisque et mauris dictum, cursus nisl et, faucibus sem.', 
+    6),
+    ('2020/09/16 14:16:00.59', 
+    'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.', 
+    6);
